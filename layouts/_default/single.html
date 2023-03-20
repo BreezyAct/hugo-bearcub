@@ -12,6 +12,22 @@
 <content>
   {{ .Content }}
 </content>
+
+<!-- Experimental: include an AI badge indicating whether AI helped make this page. -->
+{{ if isset .Params "ai" }}
+  {{ if eq .Params.ai "none" }}
+    <div style="text-align: center;">
+      <hr class="dashed" style="width:25%;">
+      <i style="margin: auto;">Badges</i>
+      <br>
+
+      {{ $image := resources.Get "images/ai-label_triangle-no-ai-used.png" }}
+      <img alt="No AI Used" title="No AI Used" src="{{ $image.RelPermalink }}" width=32 height=32>
+    </div>
+  {{ end }}
+{{ end }}
+<!-- End experimental section. -->
+
 <p>
   {{ range (.GetTerms "tags") }}
     <a class="blog-tags" href="{{ .Permalink }}">#{{ .LinkTitle }}</a>&nbsp;&nbsp;
