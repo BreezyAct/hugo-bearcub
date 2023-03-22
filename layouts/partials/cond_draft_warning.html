@@ -1,0 +1,7 @@
+<!-- If this page is a draft, make it very clear that this is a draft.
+     This is only shown when the "-D" flag is provided to Hugo.        -->
+{{ if isset .Params "draft" }}
+	{{ if eq .Params.draft true }}
+		<h1 id="draft_warning">{{ ":warning: :warning: :warning: This is a draft! :warning: :warning: :warning:" | emojify }}</h1>
+	{{ end }}
+{{ end }}

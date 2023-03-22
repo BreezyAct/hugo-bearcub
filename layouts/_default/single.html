@@ -1,4 +1,7 @@
 {{ define "main" }}
+
+{{ partial "cond_draft_warning.html" . }}
+
 {{ if not .Params.menu }}
 <h1>{{ .Title }}</h1>
 <p>
@@ -9,6 +12,7 @@
   </i>
 </p>
 {{ end }}
+
 <content>
   {{ .Content }}
 </content>
@@ -27,6 +31,8 @@
   {{ end }}
 {{ end }}
 <!-- End experimental section. -->
+
+{{ partial "cond_draft_warning.html" . }} <!-- Display a warning if this single is a draft. -->
 
 <p>
   {{ range (.GetTerms "tags") }}

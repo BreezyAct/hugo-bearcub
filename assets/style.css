@@ -1,8 +1,25 @@
+/* Begin custom modifications */
+
+#draft_warning {
+  display: block;
+  text-align: center;
+}
+
+.footnotes {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 36px;
+}
+
+/*  End custom modifications  */
+
 body {
   font-family: Verdana, sans-serif;
+  /* font-family: 'Lora', serif; */
   margin: auto;
   padding: 20px;
-  max-width: 720px;
+  max-width: 900px;
   text-align: left;
   background-color: #1d1f27;
   word-wrap: break-word;
