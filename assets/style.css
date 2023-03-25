@@ -12,6 +12,21 @@
   margin-top: 36px;
 }
 
+label {
+	display: inline-block;
+}
+
+workout-tracker fieldset {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+workout-tracker b {
+	display: block;
+	text-align: center;
+}
+
 /*  End custom modifications  */
 
 body {

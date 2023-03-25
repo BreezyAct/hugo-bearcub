@@ -1,0 +1,58 @@
+<workout-tracker>
+	<script>
+		// This page is not built, so fudge the module.exports support.
+		// Define a global "module" so that the actual source file can use it.
+		window.module = {};
+	</script>
+	<script src="/js/confetti.js"></script>
+	<script>
+		// Define the "module.exports" as the "confetti" global, the way that the
+		// CDN distributed file would.
+		window.confetti = module.exports;
+	</script>
+
+	<fieldset>
+		<b id="chest-section">Chest & Triceps</b>
+		<i>Chest</i>
+		<br>
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "chest" "set_name" "Bench Press") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "chest" "set_name" "Reverse-grip Incline Dumbbell Press") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "chest" "set_name" "Incline Dumbbell Fly") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "chest" "set_name" "Cable Crossover") }}
+
+		<i>Triceps</i>
+		<br>
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "chest" "set_name" "Triceps Pressdown") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "chest" "set_name" "Close Grip Barbell Bench Press") }}
+
+		<b id="back-section">Back & Biceps</b>
+		<i>Back</i>
+		<br>
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "back" "set_name" "Negative Pull Up") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "back" "set_name" "Wide-grip Pulldown") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "back" "set_name" "Straight-arm Pulldown") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "back" "set_name" "Seated Cable Row") }}
+
+		<i>Biceps</i>
+		<br>
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "back" "set_name" "Dumbbell/Barbell Curl") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "back" "set_name" "Dumbbell Hammer Curl") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "back" "set_name" "Dumbbell Concentration Curl") }}
+
+		<b id="shoulder-section">Shoulders & Traps</b>
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "shoulder" "set_name" "Dumbbell Shoulder Press") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "shoulder" "set_name" "Negative Lateral Raise") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "shoulder" "set_name" "Negative Upright Row") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "shoulder" "set_name" "High Cable Rear Delt Fly") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "shoulder" "set_name" "Dumbbell Shrug") }}
+
+		<b id="leg-section">Legs</b>
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "leg" "set_name" "Squat") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "leg" "set_name" "Leg Press") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "leg" "set_name" "Leg Extension") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "leg" "set_name" "Romanian Deadlift") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "leg" "set_name" "Leg-Curl") }}
+	</fieldset>
+
+	<script src="/js/workout-tracker.js"></script>
+</workout-tracker>
