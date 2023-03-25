@@ -13,31 +13,31 @@
 
 	<fieldset>
 		<b id="chest-section">Chest & Triceps</b>
-		<i>Chest</i>
+		<i id="chest-sub">Chest</i>
 		<br>
 		{{ partial "workout-checkbox" (dict "context" . "section_class" "chest" "set_name" "Bench Press") }}
 		{{ partial "workout-checkbox" (dict "context" . "section_class" "chest" "set_name" "Reverse-grip Incline Dumbbell Press") }}
 		{{ partial "workout-checkbox" (dict "context" . "section_class" "chest" "set_name" "Incline Dumbbell Fly") }}
 		{{ partial "workout-checkbox" (dict "context" . "section_class" "chest" "set_name" "Cable Crossover") }}
 
-		<i>Triceps</i>
+		<i id="tricep-sub">Triceps</i>
 		<br>
-		{{ partial "workout-checkbox" (dict "context" . "section_class" "chest" "set_name" "Triceps Pressdown") }}
-		{{ partial "workout-checkbox" (dict "context" . "section_class" "chest" "set_name" "Close Grip Barbell Bench Press") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "tricep" "set_name" "Triceps Pressdown") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "tricep" "set_name" "Close Grip Barbell Bench Press") }}
 
 		<b id="back-section">Back & Biceps</b>
-		<i>Back</i>
+		<i id="back-sub">Back</i>
 		<br>
 		{{ partial "workout-checkbox" (dict "context" . "section_class" "back" "set_name" "Negative Pull Up") }}
 		{{ partial "workout-checkbox" (dict "context" . "section_class" "back" "set_name" "Wide-grip Pulldown") }}
 		{{ partial "workout-checkbox" (dict "context" . "section_class" "back" "set_name" "Straight-arm Pulldown") }}
 		{{ partial "workout-checkbox" (dict "context" . "section_class" "back" "set_name" "Seated Cable Row") }}
 
-		<i>Biceps</i>
+		<i id="bicep-sub">Biceps</i>
 		<br>
-		{{ partial "workout-checkbox" (dict "context" . "section_class" "back" "set_name" "Dumbbell/Barbell Curl") }}
-		{{ partial "workout-checkbox" (dict "context" . "section_class" "back" "set_name" "Dumbbell Hammer Curl") }}
-		{{ partial "workout-checkbox" (dict "context" . "section_class" "back" "set_name" "Dumbbell Concentration Curl") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "bicep" "set_name" "Dumbbell/Barbell Curl") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "bicep" "set_name" "Dumbbell Hammer Curl") }}
+		{{ partial "workout-checkbox" (dict "context" . "section_class" "bicep" "set_name" "Dumbbell Concentration Curl") }}
 
 		<b id="shoulder-section">Shoulders & Traps</b>
 		{{ partial "workout-checkbox" (dict "context" . "section_class" "shoulder" "set_name" "Dumbbell Shoulder Press") }}

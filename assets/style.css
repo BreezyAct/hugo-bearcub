@@ -6,9 +6,6 @@
 }
 
 .footnotes {
-  width: 85%;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 36px;
 }
 
@@ -16,15 +13,18 @@ label {
 	display: inline-block;
 }
 
-workout-tracker fieldset {
-	width: 50%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 workout-tracker b {
 	display: block;
 	text-align: center;
+}
+
+/* Custom citations. Retrieved from https://geekthis.net/post/hugo-footnotes-and-citations/. */
+a.footnote-ref::before {
+	content: '[';
+}
+
+a.footnote-ref::after {
+	content: ']';
 }
 
 /*  End custom modifications  */
