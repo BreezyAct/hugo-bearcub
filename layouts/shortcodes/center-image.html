@@ -1,0 +1,7 @@
+<center-image>
+	<img class="image-center" src="{{ .Get "path" }}" />
+	{{ if .Get "caption" }}
+		<div style="margin:auto;width:50%;text-align:center;">{{ .Get "caption" }}</div>
+		<br>
+	{{ end }}
+</center-image>

@@ -27,6 +27,12 @@ a.footnote-ref::after {
 	content: ']';
 }
 
+.image-center {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*  End custom modifications  */
 
 body {
