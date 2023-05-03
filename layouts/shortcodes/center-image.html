@@ -1,5 +1,12 @@
 <center-image>
-	<img class="image-center" src="{{ .Get "path" }}" />
+	{{ $image := $.Page.Resources.GetMatch (.Get "path") }}
+
+	{{ if eq (.Get "size") "medium" }}
+		{{ $image = $image.Resize "600x" }}
+	{{ end }}
+
+	<img class="image-center" src="{{ $image.RelPermalink }}" />
+
 	{{ if .Get "caption" }}
 		<div style="margin:auto;width:50%;text-align:center;">{{ .Get "caption" }}</div>
 		<br>
