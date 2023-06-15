@@ -3,16 +3,18 @@
 {{ partial "cond_draft_warning.html" . }}
 
 {{ if not .Params.menu }}
-<h1>{{ .Title }}</h1>
-<p>
-  <i>
-    Publication date:
-    <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
-      {{ .Date.Format (default "2006-01-02" .Site.Params.dateFormat) }}
-    </time>
-  </i>
-</p>
-{{ end }}
+	<h1>{{ .Title }}</h1>
+	{{ if .Date }}
+		<p>
+			<i>
+				Publication date:
+				<time datetime='{{ .Date.Format "January 2, 2006" }}' pubdate>
+					{{ .Date.Format (default "January 2, 2006" .Site.Params.dateFormat) }}
+				</time>
+			</i>
+		</p>
+	{{ end }} <!--if .Date-->
+{{ end }} <!--if not .Params.menu-->
 
 <content>
   {{ .Content }}

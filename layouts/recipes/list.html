@@ -5,16 +5,18 @@
   {{ end }}
   <p>This is my recipe collection from various sources. The purpose of this list is for my convenience in the kitchen, and so I can more properly meal prep by knowing which foods I've tried and liked.</p>
   <!-- TODO: Create meal plans. -->
-  <p>I do not take ownership of recipes created by others and do my best to properly cite the original source. If your are inclined, please check the sources linked; they offer tips that I do not include in my posts, and I modify the recipes to suit my preferences (taste, simplifications at a slight cost of flavor, etc.).</p>
+  <p>I do not take ownership of recipes created by others and do my best to properly cite the original source. If you are inclined, please check the sources linked; they offer tips that I do not include in my posts, and I modify the recipes to suit my preferences (taste, simplifications at a cost of flavor, etc.).</p>
+
+  Some recipes go well with others, and so I keep track of this in the <a href="/recipes/combinations/">combinations page</a>.
 
   <h3>Recipes</h3>
   <ul class="blog-posts">
-    {{ range .Pages }}
+    {{ range where .Pages "Params.hidden" "ne" "true" }}
     <li>
       <span>
         <i>
-          <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
-            {{ .Date.Format (default "2006-01-02" .Site.Params.dateFormat) }}
+          <time datetime='{{ .Date.Format "2006-January-02" }}' pubdate>
+            {{ .Date.Format (default "2006-January-02" .Site.Params.dateFormat) }}
           </time>
         </i>
       </span>
