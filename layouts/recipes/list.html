@@ -11,7 +11,7 @@
 
   <h3>Recipes</h3>
   <ul class="blog-posts">
-    {{ range where .Pages "Params.hidden" "ne" "true" }}
+    {{ range where .Pages "Params.hiddenFromList" "ne" "true" }}
     <li>
       <span>
         <i>
