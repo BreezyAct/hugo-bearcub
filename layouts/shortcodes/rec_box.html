@@ -1,0 +1,21 @@
+<div class="rec-box">
+  <div class="rec-col-container">
+    <div class="rec-col">
+      <h2>Ingredients</h2>
+      {{ (.Get 0) | markdownify }}
+    </div>
+    <div class="rec-col">
+      <h2>Equipment</h2>
+      {{ (.Get 1) | markdownify }}
+    </div>
+  </div>
+
+  <hr style="border-top: 1px solid;border-bottom: none;border-color: #575d75;">
+
+  <h2>Instructions</h2>
+  {{ (.Get 2) | markdownify }}
+
+  <small>
+    <b>Original source: {{ (.Get 3) | markdownify }}</b>
+  </small>
+</div>

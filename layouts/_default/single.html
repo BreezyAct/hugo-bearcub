@@ -4,16 +4,29 @@
 
 {{ if not .Params.menu }}
 	<h1>{{ .Title }}</h1>
-	{{ if .Date }}
-		<p>
-			<i>
-				Publication date:
-				<time datetime='{{ .Date.Format "January 2, 2006" }}' pubdate>
-					{{ .Date.Format (default "January 2, 2006" .Site.Params.dateFormat) }}
-				</time>
-			</i>
-		</p>
-	{{ end }} <!--if .Date-->
+
+  <small>
+    {{ if .Date }}
+      <p>
+        <i>
+          Publication date:
+          <time datetime='{{ .Date.Format "January 2, 2006" }}' pubdate>
+            {{ .Date.Format (default "January 2, 2006" .Site.Params.dateFormat) }}
+          </time>
+        </i>
+        <!--If Lastmod exists & is not equal to publication date:-->
+        {{ if and .Lastmod (ne .Lastmod .Date) }}
+        |
+          <i>
+            Last edited:
+            <time datetime='{{ .Lastmod.Format "January 2, 2006" }}' pubdate>
+              {{ .Lastmod.Format (default "January 2, 2006" .Site.Params.dateFormat) }}
+            </time>
+          </i>
+        {{ end }} <!--if and .LastMod (ne .Lastmod .Date)-->
+      </p>
+    {{ end }} <!--if .Date-->
+  </small>
 {{ end }} <!--if not .Params.menu-->
 
 <content>

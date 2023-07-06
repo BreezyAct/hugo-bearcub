@@ -18,6 +18,22 @@ workout-tracker b {
 	text-align: center;
 }
 
+/* Recipe styling */
+.rec-box {
+  background-color: #2B2E3B;
+  outline: #575D75 solid 1px;
+  border-radius: 6px;
+  padding: 15px 30px 15px 30px;
+}
+
+.rec-col-container {
+  display: flex;
+}
+
+.rec-col {
+  flex: 1 0 0;
+}
+
 /* Custom citations. Retrieved from https://geekthis.net/post/hugo-footnotes-and-citations/. */
 a.footnote-ref::before {
 	content: '[';
