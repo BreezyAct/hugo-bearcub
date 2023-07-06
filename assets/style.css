@@ -34,6 +34,34 @@ workout-tracker b {
   flex: 1 0 0;
 }
 
+.rec-divider {
+  border-top: 1px solid;
+  border-bottom: none;
+  border-color: #575d75;
+}
+
+/* For mobile screens; stacks the Ingredients and Equipment sections
+   rather than leaving them side-by-side */
+@media (max-width: 800px) {
+  .rec-box {
+    background-color: #2B2E3B;
+    outline: #575D75 solid 1px;
+    border-radius: 4px;
+    padding: 7px 15px 7px 15px;
+  }
+
+  .rec-col-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rec-col:first-child {
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #575d75;
+  }
+}
+
 /* Custom citations. Retrieved from https://geekthis.net/post/hugo-footnotes-and-citations/. */
 a.footnote-ref::before {
 	content: '[';
