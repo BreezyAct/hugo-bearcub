@@ -7,9 +7,17 @@
   <!-- TODO: Create meal plans. -->
   <p>I do not take ownership of recipes created by others and do my best to properly cite the original source. If you are inclined, please check the sources linked; they offer tips that I do not include in my posts, and I modify the recipes to suit my preferences (taste, simplifications at a cost of flavor, etc.).</p>
 
-  Some recipes go well with others, and so I keep track of this in the <a href="/recipes/combinations/">combinations page</a>.
+  <p>If you have any suggestions, please send me an email at <a href="mailto:breezyact@gmail.com">breezyact@gmail.com</a> 😊</p>
 
   <h3>Recipes</h3>
+  <p><a href="/recipes/combinations/">Recipe Combinations Page</a></p>
+  <small>
+    <b>Emoji Key</b>
+    <ul style="margin-block-start: 0;">
+      <li>🔰: Quick recipes</li>
+      <li>⭐: My favorites</li>
+    </ul>
+  </small>
   <ul class="blog-posts">
     {{ range where .Pages "Params.hiddenFromList" "ne" "true" }}
     <li>
@@ -20,6 +28,7 @@
           </time>
         </i>
       </span>
+      {{ if eq .Params.beginner true}}🔰{{ end }}{{ if eq .Params.fav true}}⭐{{ end }}
       {{ if .Params.link }}
         <a href="{{ .Params.link }}" target="_blank">{{ .Title }}</a>
       {{ else }}
