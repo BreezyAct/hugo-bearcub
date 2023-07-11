@@ -2,6 +2,12 @@
      This is only shown when the "-D" flag is provided to Hugo.        -->
 {{ if isset .Params "draft" }}
 	{{ if eq .Params.draft true }}
-		<h1 id="draft_warning">{{ ":warning: :warning: :warning: This is a draft! :warning: :warning: :warning:" | emojify }}</h1>
+    <h1 id="draft_warning">
+      ⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+      <br>
+      This is a draft!
+      <br>
+      ⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+    </h1>
 	{{ end }}
 {{ end }}
