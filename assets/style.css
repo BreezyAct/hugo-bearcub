@@ -1,5 +1,6 @@
 /* Begin custom modifications */
 
+
 #draft_warning {
   display: block;
   text-align: center;
@@ -63,9 +64,10 @@ workout-tracker b {
 }
 
 /* Admonition styling */
-.admon-warn {
+.admon-att {
   /*background-color: #FF5A5F;*/
-  background-color: rgba(255, 90, 95, 0.25);
+  /*background-color: rgba(255, 90, 95, 0.25);*/
+  background-color: #562E35;
   outline: #C81D25 solid 1px;
   border-radius: 4px;
   padding: 0 10px;
@@ -74,8 +76,21 @@ workout-tracker b {
   align-items: center;
 }
 
+.admon-warn {
+  /*background-color: #FF5A5F;*/
+  background-color: rgba(255, 200, 87, 0.25);
+  outline: #FFC857 solid 1px;
+  border-radius: 4px;
+  padding: 0 10px;
+
+  display: flex;
+  align-items: center;
+}
+
+.admon-att p,
 .admon-warn p {
   margin: 10px 0;
+  color: white;
 }
 
 .admon-emoji-icon {
