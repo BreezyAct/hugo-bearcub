@@ -1,6 +1,6 @@
-<div class="admon-att">
+<div class="admon admon-att">
   <p class="admon-emoji-icon">{{ (.Get "icon") }}</p>
   <div class="flex-rows">
-    <p class="admon-content">{{ (.Get "text") | markdownify }}</p>
+    <p class="admon-content">{{ .Inner | markdownify }}</p>
   </div>
 </div>

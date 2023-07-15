@@ -63,34 +63,63 @@ workout-tracker b {
   }
 }
 
+/* Details, aka spoilers */
+details {
+  border: 1px solid #5F6781;
+  border-radius: 4px;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+summary:hover {
+  cursor: pointer;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #5F6781;
+  margin-bottom: 0.5em;
+}
+
+
 /* Admonition styling */
-.admon-att {
-  /*background-color: #FF5A5F;*/
-  /*background-color: rgba(255, 90, 95, 0.25);*/
-  background-color: #562E35;
-  outline: #C81D25 solid 1px;
+.admon {
   border-radius: 4px;
   padding: 0 10px;
 
   display: flex;
   align-items: center;
+}
+
+.admon p {
+  margin: 10px 0;
+  color: white;
+}
+
+.admon-emph {
+  background-color: #23252F;
+  outline: #5F6781 solid 1px;
+}
+
+.admon-att {
+  /*background-color: #FF5A5F;*/
+  /*background-color: rgba(255, 90, 95, 0.25);*/
+  background-color: #562E35;
+  outline: #C81D25 solid 1px;
 }
 
 .admon-warn {
   /*background-color: #FF5A5F;*/
   background-color: rgba(255, 200, 87, 0.25);
   outline: #FFC857 solid 1px;
-  border-radius: 4px;
-  padding: 0 10px;
-
-  display: flex;
-  align-items: center;
-}
-
-.admon-att p,
-.admon-warn p {
-  margin: 10px 0;
-  color: white;
 }
 
 .admon-emoji-icon {
